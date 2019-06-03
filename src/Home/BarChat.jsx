@@ -1,6 +1,6 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom';
-import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+import {BarChart, Bar, XAxis, YAxis, Tooltip, Legend} from 'recharts';
 
 import './barchat.css';
 
@@ -23,7 +23,7 @@ class BarCharts extends React.Component {
     const token = localStorage.getItem("token") 
     if(token === ""){
       this.state.loggedIn = false
-    }      
+    }   
   }
 
   _logout=()=>{
@@ -35,12 +35,18 @@ class BarCharts extends React.Component {
   onchange=(e)=>{
     if (e.target.value >= 5 && e.target.value <= 20) {
       this.setState({[e.target.name]:e.target.value})
-    } 
+      e.target.className = "input1";
+    } else {
+      e.target.className = "input1 fail";
+    }
   } 
 
 
   render(){
-    const data = [
+    if(this.state.loggedIn === false){
+      return <Redirect to="/" />
+    }
+    var data1 = [
       {
         name: 'A', marks: this.state.dataA
       },
@@ -57,11 +63,6 @@ class BarCharts extends React.Component {
         name: 'E', marks: this.state.dataE
       },
     ];
-
-    if(this.state.loggedIn === false){
-      return <Redirect to="/" />
-    }
-   
   return (
    
     <div className="container1">
@@ -72,19 +73,19 @@ class BarCharts extends React.Component {
       <div className="inputall">
       <h2>Marks</h2>
           <label>A : </label>
-          <input className="input1" type="number" placeholder=" 5-20" min="5" max="20" name="dataA" value={this.state.dataA} onChange={this.onchange} required />
+          <input className="input1" type="number" placeholder={this.state.dataA.toString()} min="5" max="20" name="dataA"  onChange={this.onchange} required />
           <br/>
           <label>B : </label>
-          <input className="input1" type="number" placeholder=" 5-20"  min="5" max="20" name="dataB" value={this.state.dataB}  onChange={this.onchange} required />
+          <input className="input1" type="number" placeholder={this.state.dataB.toString()}  min="5" max="20" name="dataB"  onChange={this.onchange} required />
           <br/>
           <label>C : </label>
-          <input className="input1" type="number" placeholder=" 5-20"  min="5" max="20" name="dataC" value={this.state.dataC}  onChange={this.onchange} required />
+          <input className="input1" type="number" placeholder={this.state.dataC.toString()}  min="5" max="20" name="dataC"   onChange={this.onchange} required />
           <br/>
           <label>D : </label>
-          <input className="input1" type="number" placeholder=" 5-20"  min="5" max="20" name="dataD" value={this.state.dataD}  onChange={this.onchange} required />
+          <input className="input1" type="number" placeholder={this.state.dataD.toString()}  min="5" max="20" name="dataD"   onChange={this.onchange} required />
           <br/>
           <label>E : </label>
-          <input className="input1" type="number" placeholder=" 5-20"  min="5" max="20" name="dataE" value={this.state.dataE}  onChange={this.onchange} required />
+          <input className="input1" type="number" placeholder={this.state.dataE.toString()}  min="5" max="20" name="dataE"  onChange={this.onchange} required />
           <br/>
       </div>
     
@@ -92,14 +93,14 @@ class BarCharts extends React.Component {
         <BarChart
           width={500}
           height={350}
-          data={data}
+          data={data1}
           margin={{
             top: 5, right: 30, left: 20, bottom: 5,
           }}>
         
-          <CartesianGrid strokeDasharray="4 4" />
+          
           <XAxis dataKey="name" />
-          <YAxis />
+          <YAxis type="number" domain={[0, 20]} />
           <Tooltip />
           <Legend />
           <Bar dataKey="marks" fill="#8884d8" />
