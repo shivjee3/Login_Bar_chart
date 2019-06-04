@@ -7,8 +7,8 @@ class App extends React.Component {
   render(){
   return (
     <Router>
-      <Route exact path="/" component={Login} />
-      <Route path="/BarCharts" component={BarCharts} />
+      <Route exact path="/Login_Bar_chart/" component={Login} />
+      <Route path="/Login_Bar_chart/BarCharts/" component={BarCharts} />
     </Router>
   );
   }
