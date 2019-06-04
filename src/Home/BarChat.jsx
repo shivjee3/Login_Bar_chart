@@ -1,6 +1,6 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom';
-import {BarChart, Bar, XAxis, YAxis, Tooltip, Legend} from 'recharts';
+import {BarChart, Bar, XAxis,ResponsiveContainer, YAxis, Tooltip, Legend} from 'recharts';
 
 import './barchat.css';
 
@@ -63,6 +63,7 @@ class BarCharts extends React.Component {
         name: 'E', marks: this.state.dataE
       },
     ];
+    
   return (
    
     <div className="container1">
@@ -90,21 +91,20 @@ class BarCharts extends React.Component {
       </div>
     
       <div className="chart">  
+      <ResponsiveContainer width={500} height={350}>
         <BarChart
-          width={500}
-          height={350}
           data={data1}
           margin={{
             top: 5, right: 30, left: 20, bottom: 5,
           }}>
-        
-          
+
           <XAxis dataKey="name" />
-          <YAxis type="number" domain={[0, 20]} />
-          <Tooltip />
+          <YAxis type="number" domain={[0 , 20]} />
+          <Tooltip cursor={false}  />
           <Legend />
           <Bar dataKey="marks" fill="#8884d8" />
-        </BarChart>      
+        </BarChart> 
+        </ResponsiveContainer>     
       </div>
     </div>
   );
