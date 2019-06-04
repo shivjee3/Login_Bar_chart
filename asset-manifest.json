@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Login_Bar_chart/static/css/main.1ab2b700.chunk.css",
-    "main.js": "/Login_Bar_chart/static/js/main.01a80ae0.chunk.js",
-    "main.js.map": "/Login_Bar_chart/static/js/main.01a80ae0.chunk.js.map",
+    "main.js": "/Login_Bar_chart/static/js/main.0c145ad2.chunk.js",
+    "main.js.map": "/Login_Bar_chart/static/js/main.0c145ad2.chunk.js.map",
     "runtime~main.js": "/Login_Bar_chart/static/js/runtime~main.a0967f45.js",
     "runtime~main.js.map": "/Login_Bar_chart/static/js/runtime~main.a0967f45.js.map",
-    "static/js/2.1ac36926.chunk.js": "/Login_Bar_chart/static/js/2.1ac36926.chunk.js",
-    "static/js/2.1ac36926.chunk.js.map": "/Login_Bar_chart/static/js/2.1ac36926.chunk.js.map",
+    "static/js/2.467f3520.chunk.js": "/Login_Bar_chart/static/js/2.467f3520.chunk.js",
+    "static/js/2.467f3520.chunk.js.map": "/Login_Bar_chart/static/js/2.467f3520.chunk.js.map",
     "index.html": "/Login_Bar_chart/index.html",
-    "precache-manifest.036b375ecdf3239defa881b3fc51191b.js": "/Login_Bar_chart/precache-manifest.036b375ecdf3239defa881b3fc51191b.js",
+    "precache-manifest.bf14e036a609463b822ebf43216e23c0.js": "/Login_Bar_chart/precache-manifest.bf14e036a609463b822ebf43216e23c0.js",
     "service-worker.js": "/Login_Bar_chart/service-worker.js",
     "static/css/main.1ab2b700.chunk.css.map": "/Login_Bar_chart/static/css/main.1ab2b700.chunk.css.map",
     "static/media/login.css": "/Login_Bar_chart/static/media/backimg.421c33a0.jpg"
