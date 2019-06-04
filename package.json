@@ -2,7 +2,7 @@
   "name": "bar-graph",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://shivjee3.github.io/Login_Bar_chart/",
+  "homepage": "http://shivjee3.com/Login_Bar_chart/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
@@ -16,7 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "predeploy":"npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
